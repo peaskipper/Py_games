@@ -1,10 +1,12 @@
-# 🧠 Infinite Tic-Tac-Toe with a Twist (Python + Tkinter)
-
-A minimal 2-player Tic-Tac-Toe game made in Python using Tkinter — but with a brainy twist to make it more competitive!
+# Creating a library for tiny python games that I'll train a bot to learn to play
 
 ---
 
-## 🔄 The Twist
+## 🧠 Game 1 : Infinite Tic-Tac-Toe with a Twist (Python + Tkinter)
+
+A minimal 2-player Tic-Tac-Toe game made in Python using Tkinter — but with a brainy twist to make it more competitive!
+
+### 🔄 The Twist
 
 Unlike classic Tic-Tac-Toe, **each player may only have 3 active marks on the board at a time**. On their 4th turn:
 - Their **oldest mark fades**, locking the tile **just for that turn**.
@@ -13,9 +15,7 @@ Unlike classic Tic-Tac-Toe, **each player may only have 3 active marks on the bo
 
 🎯 This eliminates stalemates, ensures perpetual play, and rewards extensive strategy!
 
----
-
-## ✨ Features
+### ✨ Features
 
 - 🎮 **2-Player local game** with alternating turns.
 - 🌀 **Fading logic**: Only 3 active marks per player; oldest fades on the 4th turn.
@@ -27,7 +27,7 @@ Unlike classic Tic-Tac-Toe, **each player may only have 3 active marks on the bo
 
 ---
 
-## 🧰 Requirements
+### 🧰 Requirements
 
 Just Python — no external packages!
 

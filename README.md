@@ -1,4 +1,4 @@
-# Creating a library for tiny python games that I'll train a bot to learn to play
+# Creating a library of tiny python games
 
 ---
 

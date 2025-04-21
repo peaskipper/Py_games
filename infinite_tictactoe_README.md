@@ -1,4 +1,4 @@
-# 🧠 Tic-Tac-Toe with a Twist (Python + Tkinter)
+# 🧠 Infinite Tic-Tac-Toe with a Twist (Python + Tkinter)
 
 A minimal 2-player Tic-Tac-Toe game made in Python using Tkinter — but with a brainy twist to make it more competitive!
 

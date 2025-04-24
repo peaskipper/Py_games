@@ -15,8 +15,8 @@ logging.basicConfig(
 # -----------------------------
 # Game Configuration Constants
 # -----------------------------
-BOARD_SIZE = 3  # 3x3 board
-ACTIVE_MARK_LIMIT = 3  # Only 3 active marks allowed per player
+BOARD_SIZE = 7  # 3x3 board
+ACTIVE_MARK_LIMIT = 7  # Only 3 active marks allowed per player
 
 PLAYERS = ["x", "o"]
 EMPTY = ""
@@ -45,7 +45,7 @@ class TicTacToeGame:
     2-Player Tic Tac Toe with a twist:
     - Only 3 active marks (x or o) per player can remain on the board.
     - Oldest mark fades when a new one is placed.
-    - Faded marks cannot be reused.
+    - Faded mark cannot be reclaimed by the immediate next move.
     """
     def __init__(self):
 
@@ -143,7 +143,7 @@ class TicTacToeGame:
         self.buttons[row][col].config(text=self.current_player, fg=MARK_COLORS[self.current_player])
 
         # Check for win condition
-        if len(self.moves_x) == 3 or len(self.moves_o) == 3:
+        if len(self.moves_x) == ACTIVE_MARK_LIMIT or len(self.moves_o) == ACTIVE_MARK_LIMIT:
             if self._check_win(self.current_player):
                 self._end_game(f"{self.current_player} wins!")
                 return
@@ -153,7 +153,7 @@ class TicTacToeGame:
         self._update_status_label()
 
         # Fade the oldest mark if this is the 4th move for the player
-        if (self.current_player == self.x and len(self.moves_x) == 3) or (self.current_player == self.o and len(self.moves_o) == 3):
+        if (self.current_player == self.x and len(self.moves_x) == ACTIVE_MARK_LIMIT) or (self.current_player == self.o and len(self.moves_o) == ACTIVE_MARK_LIMIT):
             self._fade_oldest_mark()
                 
     def _update_moves(self, row, col):
